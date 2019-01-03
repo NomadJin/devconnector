@@ -179,6 +179,6 @@ router.delete('/comment/:id/:comment_id', passport.authenticate('jwt', { session
             post.save().then(post => res.json(post));
         })
         .catch(err => res.status(404).json({ postnotfound: 'No post found' }));
-})
+});
 
 module.exports = router;
